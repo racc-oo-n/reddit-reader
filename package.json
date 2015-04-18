@@ -1,0 +1,33 @@
+{
+  "name": "reddit-reader",
+  "version": "0.0.1",
+  "description": "Client-reader for reddit.com",
+  "author": "Prikhodko Anna <prikhodko.anna89@gmail.com>",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf public/js/* public/css/* public/templates/*",
+    "build:coffee": "coffee -co public/js assets/coffee",
+    "build:jade": "jade assets/jade -Po public/templates",
+    "build:scss": "cat assets/scss/app.scss | node-sass > public/css/app.css",
+    "build:all": "npm run build:jade && npm run build:coffee && npm run build:scss",
+    "copy": "cp public/templates/index.html ./",
+    "build": "npm run clean && npm run build:all && npm run copy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/racc-oo-n/reddit-reader"
+  },
+  "keywords": [
+    "challenge",
+    "reddit API",
+    "redit.js"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.3.4",
+    "coffee-script": "^1.9.1",
+    "jade": "^1.9.2",
+    "node-sass": "^2.1.1",
+    "page": "^1.6.2",
+    "reddit.js": "^0.1.3"
+  }
+}
