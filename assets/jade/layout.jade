@@ -4,11 +4,9 @@ html
     block head
       meta(charset="utf-8")
       title Reddit-reader
-      link(href="public/css/app.css", rel="stylesheet")
-      script(src="public/js/reddit.min.js")
-      script(src="public/js/page.js")
-      link(rel="shortcut icon", href="public/img/icon.gif")
       base(href="/reddit-reader")
+      link(href="public/css/app.css", rel="stylesheet")
+      link(rel="shortcut icon", href="public/img/icon.gif")
   body
     .container
       block header
@@ -18,4 +16,6 @@ html
       block footer
         include footer.jade
 
+    script(src="public/js/reddit.min.js")
+    script(src="public/js/page.js")
     script(src="public/js/app.js")
