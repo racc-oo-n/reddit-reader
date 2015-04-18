@@ -123,7 +123,7 @@ class Reader
     #     html.createListItem(child.data)
 
   setRouting: ->
-    page.base('/')
+    page.base('/reddit-reader')
     page('/', @empty)
     page('/:r/:subreddit', @list)
     page('/article/:id', @article)

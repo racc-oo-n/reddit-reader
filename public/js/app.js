@@ -152,7 +152,7 @@
     }
 
     Reader.prototype.setRouting = function() {
-      page.base('/');
+      page.base('/reddit-reader');
       page('/', this.empty);
       page('/:r/:subreddit', this.list);
       page('/article/:id', this.article);
