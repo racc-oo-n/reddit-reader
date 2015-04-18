@@ -10,7 +10,7 @@
     "build:jade": "jade assets/jade/index.jade public/templates/index.html -o public/templates",
     "build:scss": "cat assets/scss/app.scss | node-sass > public/css/app.css",
     "build:all": "npm run build:jade && npm run build:coffee && npm run build:scss",
-    "copy:index": "cp public/templates/index.html ./",
+    "copy:index": "cp public/templates/index.html ./ && cp public/templates/index.html ./404.html",
     "copy:js": "cp -t public/js node_modules/page/page.js node_modules/reddit.js/reddit.min.js",
     "copy": "npm run copy:index && npm run copy:js",
     "build": "npm run clean && npm run build:all && npm run copy"
